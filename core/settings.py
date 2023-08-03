@@ -24,8 +24,7 @@ if not DEBUG:
 
 
 # Application definition
-
-INSTALLED_APPS = [
+DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -34,7 +33,36 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 
+PROJECT_APPS = []
+
+THIRD_PARTY_APPS = [
+    'corsheaders',
+    'rest_framework',
+    'ckeditor',
+    'ckeditor_uploader',
+]
+
+INSTALLED_APPS= DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
+
+
+# CKEditor
+CKEDITOR_CONFIGS = {
+    'default': {
+         'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock'],
+            ['Link', 'Unlink'],
+            ['RemoveFormat', 'Source']
+        ],
+        'autoParagraph': False
+    },
+}
+CKEDITOR_UPLOAD_PATH = '/media/'
+
+
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
