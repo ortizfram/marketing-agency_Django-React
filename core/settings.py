@@ -2,6 +2,7 @@ from pathlib import Path
 import os
 import environ
 
+# Load the environment variables from the .env file
 env = environ.Env()
 environ.Env.read_env()
 
@@ -18,9 +19,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG")
 
-ALLOWED_HOSTS = env.list('ALLOWED_HOSTS_DEV')
-if not DEBUG:
-    ALLOWED_HOSTS=env.list('ALLOWED_HOSTS_DEPLOY')
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -144,3 +143,4 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
