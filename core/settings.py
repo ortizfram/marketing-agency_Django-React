@@ -18,7 +18,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG")
 
-ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS_DEV").split(",")
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",")
 
 
 # Application definition
@@ -75,7 +75,7 @@ ROOT_URLCONF = "core.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, 'build')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -161,17 +161,17 @@ REST_FRAMEWORK = {
 }
 
 # who can use my site : 3000/react - 8000/django
-CORS_ORIGIN_WHITELIST = os.getenv("CORS_ORIGIN_WHITELIST_DEV", "").split(",")
+CORS_ORIGIN_WHITELIST = os.getenv("CORS_ORIGIN_WHITELIST_DEV", "http://localhost:3000").split(",")
+CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS_DEV", "http://localhost:3000").split(",")
 
-CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS_DEV", "").split(",")
 
 EMAIL_BACKEND='django.core.mail.backends.console.EmailBackend'
 
 if not DEBUG:
-    ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS_DEPLOY", "").split(",")
     CORS_ORIGIN_WHITELIST = os.getenv("CORS_ORIGIN_WHITELIST_DEPLOY", "").split(",")
     CSRF_TRUSTED_ORIGINS = os.getenv("CSRF_TRUSTED_ORIGINS_DEPLOY", "").split(",")
     DATABASES = {
         "default": os.getenv("DATABASE_URL"),
     }
     DATABASES["default"]["ATOMIC_REQUESTS"] = True
+
