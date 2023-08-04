@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 
 function Navbar() {
-  return <div>Navbar</div>;
+  return <nav className="w-full py-10 shadow-md fixed">Navbar</nav>;
 }
 
 // map states redux

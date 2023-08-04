@@ -18,7 +18,9 @@ function Home() {
   return (
     <Layout>
       <Navbar />
-      <h1>home</h1>
+      <div className="pt-28">
+        <h1>home</h1>
+      </div>
       <Footer />
     </Layout>
   );
