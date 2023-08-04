@@ -8,4 +8,4 @@ function Footer() {
 const mapStateToProps = (state) => ({});
 
 // use redux
-export default coonnect(mapStateToProps, {})(Footer);
+export default connect(mapStateToProps, {})(Footer);

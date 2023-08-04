@@ -8,4 +8,4 @@ function Navbar() {
 const mapStateToProps = (state) => ({});
 
 // use redux
-export default coonnect(mapStateToProps, {})(Navbar);
+export default connect(mapStateToProps, {})(Navbar);

@@ -1,4 +1,4 @@
-import { coonnect } from "react-redux";
+import { connect } from "react-redux";
 
 // pass children
 function Layout({ children }) {
@@ -8,4 +8,4 @@ function Layout({ children }) {
 const mapStateToProps = (state) => ({});
 
 // use redux
-export default coonnect(mapStateToProps, {})(Layout);
+export default connect(mapStateToProps, {})(Layout);
