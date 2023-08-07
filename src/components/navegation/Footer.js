@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import logo_sharp from "assets/img/logo.png";
+import logo_sharp from "./../../assets/img/logo.png";
 
 const navigation = {
   solutions: [

@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
-import logo_sharp from "assets/img/logo.png";
+import logo_sharp from "./../../assets/img/logo.png";
 import { useState } from "react";
 import DotLoader from "react-spinners/DotLoader";
 

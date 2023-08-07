@@ -1,7 +1,7 @@
-import Header from "components/home/Header";
-import Footer from "components/navegation/Footer";
-import Navbar from "components/navegation/Navbar";
-import Layout from "hocs/layouts/Layout";
+import Header from "./../../components/home/Header";
+import Footer from "./../../components/navegation/Footer";
+import Navbar from "./../../components/navegation/Navbar";
+import Layout from "./../../hocs/layouts/Layout";
 import { useEffect } from "react";
 
 function Home() {
