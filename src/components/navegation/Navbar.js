@@ -57,9 +57,9 @@ function Navbar() {
             >
               Contact
             </NavLink>
-            <button
-              type="button"
-              className="ml-12 relative inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-2 text-xl font-bold text-white shadow-sm transition duration-300 ease-in-out hover:bg-black focus:outline-none focus:ring-2 "
+            <Link
+              to="/contact"
+              className="ml-12 inline-flex items-center rounded-md border transition duration-300 border-transparent bg-orange-500 px-6 py-3 text-lg font-bold text-white shadow-sm hover:bg-gray-900 "
             >
               Hire us
               <DotLoader
@@ -68,7 +68,7 @@ function Navbar() {
                 size={20}
                 color="#f2f2f2"
               />
-            </button>
+            </Link>
           </div>
         </div>
       </div>
