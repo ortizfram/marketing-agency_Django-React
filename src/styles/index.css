@@ -18,6 +18,11 @@ code {
     monospace;
 }
 
+/* NAvLink */
+.active {
+  @apply border-orange-500;
+}
+
 /* LOGO */
 #logo {
   width: 70px;
