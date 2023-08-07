@@ -32,7 +32,7 @@ function Header() {
                   //   onLoopDone={handleDone}
                   //   onType={handleType}
                 />
-                <ul className="text-gray-700 flex gap-8 font-normal text-sm mt-7 text-center justify-center">
+                <ul className="text-gray-700 flex gap-8 font-normal text-sm py-12 items-center justify-center">
                   <li>
                     <Link
                       to="/"
@@ -55,6 +55,22 @@ function Header() {
                       className="inline-flex border-b-2 border-transparent hover:border-orange-500"
                     >
                       item 3
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/"
+                      className="inline-flex border-b-2 border-transparent hover:border-orange-500"
+                    >
+                      item 4
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/"
+                      className="inline-flex border-b-2 border-transparent hover:border-orange-500"
+                    >
+                      item 5
                     </Link>
                   </li>
                 </ul>
