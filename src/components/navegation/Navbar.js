@@ -2,8 +2,12 @@ import { connect } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
 import logo_sharp from "assets/img/logo.png";
 import loading_dots from "assets/img/loading-dots.gif";
+import { useState } from "react";
+import DotLoader from "react-spinners/DotLoader";
 
 function Navbar() {
+  const [loading, setLoading] = useState(true);
+
   return (
     <nav className="w-full py-10 top-0 fixed">
       <div className="bg-white px-4 sm:px-6">
@@ -58,11 +62,7 @@ function Navbar() {
               className="ml-12 relative inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-2 text-xl font-bold text-white shadow-sm transition duration-300 ease-in-out hover:bg-black focus:outline-none focus:ring-2 "
             >
               Hire us
-              <img
-                src={loading_dots}
-                alt="loading-dots-gif"
-                className="w-7 h-2 mt-1 ml-2"
-              />
+              <DotLoader loading={loading} size={20} color="#f2f2f2" />
             </button>
           </div>
         </div>
