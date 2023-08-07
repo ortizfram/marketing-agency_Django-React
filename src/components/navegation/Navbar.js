@@ -62,7 +62,12 @@ function Navbar() {
               className="ml-12 relative inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-2 text-xl font-bold text-white shadow-sm transition duration-300 ease-in-out hover:bg-black focus:outline-none focus:ring-2 "
             >
               Hire us
-              <DotLoader loading={loading} size={20} color="#f2f2f2" />
+              <DotLoader
+                className="ml-4"
+                loading={loading}
+                size={20}
+                color="#f2f2f2"
+              />
             </button>
           </div>
         </div>
