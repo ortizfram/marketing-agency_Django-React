@@ -5,7 +5,7 @@ import loading_dots from "assets/img/loading-dots.gif";
 
 function Navbar() {
   return (
-    <nav className="w-full py-10 shadow-md fixed">
+    <nav className="w-full py-10 top-0 fixed">
       <div className="bg-white px-4 sm:px-6">
         <div className="-ml-4 -mt-2 hidden lg:flex flex-wrap items-center justify-between sm:flex-nowrap md:px-14 px-2">
           {/* LOGO */}
@@ -30,10 +30,10 @@ function Navbar() {
               Services
             </Link>
             <Link
-              to="/us"
+              to="/about"
               className="mr-4 text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-orange-500 transition duration-300 ease-in-out "
             >
-              Us
+              About Us
             </Link>
             <Link
               to="/careers"
