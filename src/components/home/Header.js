@@ -1,4 +1,5 @@
 import { Typewriter } from "react-simple-typewriter";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -31,6 +32,32 @@ function Header() {
                   //   onLoopDone={handleDone}
                   //   onType={handleType}
                 />
+                <ul className="text-gray-700 flex gap-8 font-normal text-sm mt-7 text-center justify-center">
+                  <li>
+                    <Link
+                      to="/"
+                      className="inline-flex border-b-2 border-transparent hover:border-orange-500"
+                    >
+                      item 1
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/"
+                      className="inline-flex border-b-2 border-transparent hover:border-orange-500"
+                    >
+                      item 2
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/"
+                      className="inline-flex border-b-2 border-transparent hover:border-orange-500"
+                    >
+                      item 3
+                    </Link>
+                  </li>
+                </ul>
               </h1>
               <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
                 Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
