@@ -7,8 +7,31 @@ import DotLoader from "react-spinners/DotLoader";
 function Navbar() {
   const [loading, setLoading] = useState(true);
 
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  // shadow to navbar on scroll down
+  function scrollFunction() {
+    if (document.getElementById("navbar")) {
+      if (
+        document.body.scrollTop > 50 ||
+        document.documentElement.scrollTop > 50
+      ) {
+        document.getElementById("navbar").classList.add("shadow-navbar");
+        document.getElementById("navbar").classList.add("bg-white");
+      } else {
+        document.getElementById("navbar").classList.remove("shadow-navbar");
+        document.getElementById("navbar").classList.remove("bg-white");
+      }
+    }
+  }
+
   return (
-    <nav className="w-full py-10 top-0 fixed">
+    <nav
+      id="navbar"
+      className="transition duration-300 ease-in-out w-full py-10 shadow-navbar top-0 fixed"
+    >
       <div className="px-4 sm:px-6">
         <div className="-ml-4 -mt-2 hidden lg:flex flex-wrap items-center justify-between sm:flex-nowrap md:px-14 px-2">
           {/* LOGO */}
