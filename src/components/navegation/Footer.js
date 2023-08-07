@@ -8,18 +8,13 @@ const navigation = {
     { name: "Commerce", href: "#" },
     { name: "Insights", href: "#" },
   ],
-  support: [
-    { name: "Pricing", href: "#" },
-    { name: "Documentation", href: "#" },
-    { name: "Guides", href: "#" },
-    { name: "API Status", href: "#" },
-  ],
+  support: [{ name: "Contact", href: "/contact" }],
   company: [
-    { name: "About", href: "#" },
-    { name: "Blog", href: "#" },
-    { name: "Jobs", href: "#" },
-    { name: "Press", href: "#" },
-    { name: "Partners", href: "#" },
+    { name: "Cases", href: "/cases" },
+    { name: "Blog", href: "/blog" },
+    { name: "Services", href: "/services" },
+    { name: "Careers", href: "/careers" },
+    { name: "About", href: "/about" },
   ],
   legal: [
     { name: "Claim", href: "#" },
@@ -101,10 +96,6 @@ function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <img src={logo_sharp} width={70} height={60} alt="logo" />
-            <p className="text-base text-gray-500">
-              Making the world a better place through constructing elegant
-              hierarchies.
-            </p>
             <div className="flex space-x-6">
               {navigation.social.map((item) => (
                 <a
@@ -155,9 +146,7 @@ function Footer() {
             </div>
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
-                <h3 className="text-base font-medium text-gray-900">
-                  Services
-                </h3>
+                <h3 className="text-base font-medium text-gray-900">Company</h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.company.map((item) => (
                     <li key={item.name}>
@@ -172,7 +161,9 @@ function Footer() {
                 </ul>
               </div>
               <div className="mt-12 md:mt-0">
-                <h3 className="text-base font-medium text-gray-900">Company</h3>
+                <h3 className="text-base font-medium text-gray-900">
+                  Services
+                </h3>
                 <ul role="list" className="mt-4 space-y-4">
                   {navigation.legal.map((item) => (
                     <li key={item.name}>
@@ -191,7 +182,7 @@ function Footer() {
         </div>
         <div className="mt-12 border-t border-gray-200 pt-8">
           <p className="text-base text-gray-400 xl:text-center">
-            &copy; 2020 Your Company, Inc. All rights reserved.
+            &copy; 2023 Virtual MKT, Inc. All rights reserved.
           </p>
         </div>
       </div>
