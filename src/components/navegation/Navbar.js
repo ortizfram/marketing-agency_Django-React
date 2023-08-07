@@ -30,7 +30,7 @@ function Navbar() {
   return (
     <nav
       id="navbar"
-      className="transition duration-300 ease-in-out w-full py-10 shadow-navbar top-0 fixed"
+      className="transition duration-300 ease-in-out w-full py-6 shadow-navbar top-0 fixed"
     >
       <div className="px-4 sm:px-6">
         <div className="-ml-4 -mt-2 hidden lg:flex flex-wrap items-center justify-between sm:flex-nowrap md:px-14 px-2">
