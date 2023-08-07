@@ -10,7 +10,7 @@ function Navbar() {
         <div className="-ml-4 -mt-2 hidden lg:flex flex-wrap items-center justify-between sm:flex-nowrap md:px-14 px-2">
           {/* LOGO */}
           <div className="ml-4 mt-2 flex items-center">
-            <img src={logo_sharp} width={70} height={60} alt="logo" />
+            <img id="logo" src={logo_sharp} width={70} height={60} alt="logo" />
             <h1 className="ml-2 font-bold h-12 text-3xl flex items-center font-righteous">
               Virtual MKT
             </h1>
@@ -45,7 +45,13 @@ function Navbar() {
               to="/blog"
               className="mr-4 text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-orange-500 transition duration-300 ease-in-out "
             >
-              blog
+              Blog
+            </Link>
+            <Link
+              to="/contact"
+              className="mr-4 text-lg inline-flex font-medium leading-6 text-gray-900 border-b-2 border-white hover:border-orange-500 transition duration-300 ease-in-out "
+            >
+              Contact
             </Link>
             <button
               type="button"
