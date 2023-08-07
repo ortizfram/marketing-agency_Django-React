@@ -1,7 +1,6 @@
 import { connect } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
 import logo_sharp from "assets/img/logo.png";
-import loading_dots from "assets/img/loading-dots.gif";
 import { useState } from "react";
 import DotLoader from "react-spinners/DotLoader";
 
@@ -10,7 +9,7 @@ function Navbar() {
 
   return (
     <nav className="w-full py-10 top-0 fixed">
-      <div className="bg-white px-4 sm:px-6">
+      <div className="px-4 sm:px-6">
         <div className="-ml-4 -mt-2 hidden lg:flex flex-wrap items-center justify-between sm:flex-nowrap md:px-14 px-2">
           {/* LOGO */}
           <Link to="/" className="ml-4 mt-2 flex items-center">
