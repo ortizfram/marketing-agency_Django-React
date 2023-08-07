@@ -1,6 +1,7 @@
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import logo_sharp from "assets/img/logo.png";
+import loading_dots from "assets/img/loading-dots.gif";
 
 function Navbar() {
   return (
@@ -48,9 +49,14 @@ function Navbar() {
             </Link>
             <button
               type="button"
-              className="ml-12 relative inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
+              className="ml-12 relative inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-6 py-2 text-xl font-bold text-white shadow-sm transition duration-300 ease-in-out hover:bg-black focus:outline-none focus:ring-2 "
             >
-              Create new job
+              Hire us
+              <img
+                src={loading_dots}
+                alt="loading-dots-gif"
+                className="w-7 h-2 mt-1 ml-2"
+              />
             </button>
           </div>
         </div>

@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         righteous: ["Righteous", "cursive"],
       },
+      colors: {
+        color1: "#fff",
+      },
     },
   },
   plugins: [],
