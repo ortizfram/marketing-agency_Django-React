@@ -11,6 +11,10 @@ import { useEffect } from "react";
 import BlogList from "../../components/home/BlogList";
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       <Navbar />

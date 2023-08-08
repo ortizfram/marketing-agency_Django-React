@@ -4,6 +4,10 @@ import Layout from "./../../hocs/layouts/Layout";
 import { useEffect } from "react";
 
 function Careers() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       <Navbar />

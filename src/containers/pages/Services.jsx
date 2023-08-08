@@ -6,6 +6,10 @@ import Layout from "./../../hocs/layouts/Layout";
 import { useEffect } from "react";
 
 function Services() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const posts_software = [
     {
       title: "Boost your conversion rate",

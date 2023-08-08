@@ -6,6 +6,10 @@ import Layout from "./../../hocs/layouts/Layout";
 import { useEffect } from "react";
 
 function Cases() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       <Navbar />

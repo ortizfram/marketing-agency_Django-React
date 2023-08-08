@@ -4,6 +4,10 @@ import Layout from "./../../hocs/layouts/Layout.js";
 import { useEffect } from "react";
 
 function About() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <Layout>
       <Navbar />
