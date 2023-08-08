@@ -7,8 +7,9 @@ import Features from "./../../components/home/Features";
 import LogoCloud from "./../../components/home/LogoCloud";
 import CTA from "./../../components/home/CTA";
 import Layout from "./../../hocs/layouts/Layout";
-import { useEffect } from "react";
 import BlogList from "../../components/home/BlogList";
+
+import { useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 
 function Home() {
