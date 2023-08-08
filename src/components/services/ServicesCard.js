@@ -5,10 +5,12 @@ function ServiceCard({ data, index }) {
       onMouseEnter={() => {
         const title_element = document.getElementById(index);
         title_element.classList.add("text-rosha");
+        title_element.classList.remove("text-gray-900");
       }}
       onMouseLeave={() => {
         const title_element = document.getElementById(index);
         title_element.classList.remove("text-rosha");
+        title_element.classList.add("text-gray-900");
       }}
       //   ---
       className="relative w-full p-8 h-96 lg:h-[20pm] bg-white shadow-xl hover:translate-y-2 transition duration-300 ease-in-out"
@@ -23,7 +25,7 @@ function ServiceCard({ data, index }) {
       <div className="absolute bottom-0 left-0 p-8">
         <h2
           id={index}
-          className="items-end text-xl font-semibold text-gray-900 pt-8"
+          className="items-end text-xl text-gray-900 font-semibold pt-8"
         >
           learn More
         </h2>
