@@ -1,21 +1,33 @@
+import { Link } from "react-router-dom";
+
 function CaseCard({ data, index }) {
   return (
-    <div
-      // HOVER EFFECT
+    <Link
+      to="/cases/id"
+      // HOVER EFFECT title
       onMouseEnter={() => {
         const title_element = document.getElementById(index);
+        const img = document.getElementById(data.id);
         title_element.classList.add("text-rosha");
+        img.classList.add("object-scale-down");
       }}
       onMouseLeave={() => {
         const title_element = document.getElementById(index);
+        const img = document.getElementById(data.id);
         title_element.classList.remove("text-rosha");
+        img.classList.remove("object-scale-down");
       }}
       //   ----
       key={data.title}
       className="flex flex-col overflow-hidden rounded-lg shadow-lg "
     >
       <div className="flex-shrink-0">
-        <img className="h-96 w-full object-cover" src={data.imageUrl} alt="" />
+        <img
+          id={data.id}
+          className="h-96 w-full object-cover transition duration-500 ease-in-out"
+          src={data.imageUrl}
+          alt=""
+        />
       </div>
       <div className="flex flex-1 flex-col justify-between bg-white p-6">
         <div className="flex-1">
@@ -27,40 +39,17 @@ function CaseCard({ data, index }) {
           <a href={data.href} className="mt-2 block">
             <p
               id={index}
-              className="xl:text-4xl text-2xl font-semibold text-gray-900 transition duration-300 ease-in-out"
+              className="xl:text-4xl text-2xl font-semibold text-gray-900 transition duration-500 ease-in-out"
             >
               {data.title}
             </p>
-            <p className="mt-3 text-base text-gray-500">{data.description}</p>
+            <p className="pt-4 pb-6 mt-3 text-2xl text-gray-500 leading-9">
+              {data.description}
+            </p>
           </a>
         </div>
-        {/* author */}
-        {/* <div className="mt-6 flex items-center">
-      <div className="flex-shrink-0">
-        <a href={post.author.href}>
-          <span className="sr-only">{post.author.name}</span>
-          <img
-            className="h-10 w-10 rounded-full"
-            src={post.author.imageUrl}
-            alt=""
-          />
-        </a>
       </div>
-      <div className="ml-3">
-        <p className="text-sm font-medium text-gray-900">
-          <a href={post.author.href} className="hover:underline">
-            {post.author.name}
-          </a>
-        </p>
-        <div className="flex space-x-1 text-sm text-gray-500">
-          <time dateTime={post.datetime}>{post.date}</time>
-          <span aria-hidden="true">&middot;</span>
-          <span>{post.readingTime} read</span>
-        </div>
-      </div>
-    </div> */}
-      </div>
-    </div>
+    </Link>
   );
 }
 

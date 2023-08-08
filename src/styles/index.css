@@ -18,7 +18,7 @@ code {
     monospace;
 }
 
-/* NAvLink */
+/* NAvLink --------------------*/
 .active {
   @apply border-orange-500;
 }
@@ -47,7 +47,7 @@ code {
   border-radius: 10px;
 }
 
-/* LOGO */
+/* LOGO -----------------------------*/
 #logo {
   width: 70px;
   height: 60px;
@@ -61,5 +61,24 @@ code {
   to {
     transform: rotate(360deg);
   }
+}
+/* carousel arrrows --------------------- */
+.rec.rec-arrow {
+  background-color: #0b1014;
+  color: #eeeeee;
+}
+
+.rec.rec-arrow:hover {
+  background-color: #393b3f;
+}
+
+.rec.rec-arrow:disabled {
+  visibility: hidden;
+}
+
+.rec-carousel-item:focus {
+  outline: none;
+  box-shadow: inset 0 0 1px 1px lightgrey;
+  background-color: #eaeaea;
 }
 /* --- */
