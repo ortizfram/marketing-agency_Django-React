@@ -1,3 +1,5 @@
+import CasesList from "../../components/cases/CasesList";
+import Header from "../../components/cases/Header";
 import Footer from "./../../components/navegation/Footer";
 import Navbar from "./../../components/navegation/Navbar";
 import Layout from "./../../hocs/layouts/Layout";
@@ -8,7 +10,8 @@ function Cases() {
     <Layout>
       <Navbar />
       <div className="pt-28">
-        <h1>Cases</h1>
+        <Header />
+        <CasesList />
       </div>
       <Footer />
     </Layout>

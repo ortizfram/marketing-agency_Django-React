@@ -7,7 +7,7 @@ module.exports = {
         righteous: ["Righteous", "cursive"],
       },
       colors: {
-        color1: "#fff",
+        rosha: "#6b4ac1",
       },
       boxShadow: {
         navbar:

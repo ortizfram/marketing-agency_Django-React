@@ -14,7 +14,7 @@ function Home() {
   return (
     <Layout>
       <Navbar />
-      <div className="pt-20">
+      <div className="pt-40">
         <Header />
         <Incentives />
         <UseCases />

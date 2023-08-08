@@ -5,13 +5,18 @@ function Header() {
   return (
     <main>
       <div className="relative px-6 lg:px-8">
-        <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
+        <div className="mx-auto max-w-full xl:mx-12 xl:pt-40 xl:pb-64 lg:pt-40 lg:pb-48 pt-24 pb-40 ">
           <div>
             <div>
-              <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-                We handle your{" "}
+              <h1 className="text-4xl font-semibold tracking-tight pb-16  sm:text-7xl">
                 <Typewriter
-                  words={["Business solutions", "Adds", "Code", "sellings! 🛍️"]}
+                  words={[
+                    "Business solutions",
+                    "sellings! 🛍️",
+                    "Code",
+                    "Blogs",
+                    "Adds",
+                  ]}
                   loop={0}
                   cursor
                   cursorStyle="_"
@@ -21,7 +26,7 @@ function Header() {
                   //   onLoopDone={handleDone}
                   //   onType={handleType}
                 />
-                <ul className="text-gray-700 flex gap-8 font-normal text-sm py-12 items-center justify-center">
+                <ul className="text-gray-700 flex gap-8 font-normal text-2xl pt-48 sm:pb-0">
                   <li>
                     <Link
                       to="/"
